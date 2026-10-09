@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10. Sınıf Türk Dili ve Edebiyatı - 1. Tema: Sözün Ezgisi</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #2980b9;
+            --accent-color: #e74c3c;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 2.5rem 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        header h1 { margin: 0; font-size: 2.5rem; }
+        header p { font-size: 1.2rem; opacity: 0.9; }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .section-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--secondary-color);
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+        h3 {
+            color: var(--secondary-color);
+        }
+        
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .highlight-box {
+            background-color: #e8f4f8;
+            border-left: 4px solid var(--secondary-color);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .example-box {
+            background-color: #fef9e7;
+            border: 1px dashed #f39c12;
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 1rem 0;
+        }
+
+        .question-box {
+            background: #fdfefe;
+            border: 1px solid #d4efdf;
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+        }
+        .question-box h4 {
+            color: #117a65;
+            margin-top: 0;
+        }
+
+        .student-info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .student-info-grid input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .feedback {
+            margin-top: 10px;
+            padding: 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            display: none;
+        }
+        .feedback.error {
+            background-color: #fadbd8;
+            color: #922b21;
+        }
+        .feedback.success {
+            background-color: #d4efdf;
+            color: #196f3d;
+        }
+        .feedback.hint {
+            background-color: #fcf3cf;
+            color: #7d6608;
+        }
+
+        button.check-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button.check-btn:hover {
+            background-color: #1b4f72;
+        }
+
+        #sonuc-kutusu {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.2rem;
+            display: none;
+            margin-top: 2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--primary-color);
+            color: white;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>10. Sınıf Türk Dili ve Edebiyatı</h1>
+        <p>1. Tema: Sözün Ezgisi | Ders Notları ve İnteraktif Sınav Modülü</p>
+    </header>
+
+    <div class="container">
+
+        <!-- ÖĞRENCİ BİLGİLERİ BÖLÜMÜ -->
+        <section class="section-card" id="ogrenci-bolumu">
+            <h2>Öğrenci Bilgileri</h2>
+            <p>Lütfen test ve değerlendirme sorularına başlamadan önce aşağıdaki bilgileri eksiksiz doldurunuz.</p>
+            <div class="student-info-grid">
+                <div>
+                    <label for="ogrenci-ad"><strong>Adınız Soyadınız:</strong></label>
+                    <input type="text" id="ogrenci-ad" placeholder="Adınızı ve soyadınızı giriniz">
+                </div>
+                <div>
+                    <label for="ogrenci-no"><strong>Numaranız / Sınıfınız:</strong></label>
+                    <input type="text" id="ogrenci-no" placeholder="Örn: 542 / 10-A">
+                </div>
+            </div>
+            <button class="check-btn" onclick="sinaviBaslat()">Sınavı Başlat ve Soruları Göster</button>
+        </section>
+
+        <!-- KİTAPÇIK / DERS NOTLARI (Özet) -->
+        <div id="ders-icerigi" style="display:none;">
+            <section class="section-card">
+                <h2>1. Türk Edebiyatının Dönemleri</h2>
+                <p>Mehmet Fuat Köprülü, Türklerin geçirdiği kültürel aşamaları esas alarak Türk edebiyatının dönemlerini belirlemiştir[cite: 1].</p>
+                <ul>
+                    <li><strong>İslamiyet Öncesi Türk Edebiyatı[cite: 1]:</strong> Sözlü Dönem ve Yazılı Dönem (Göktürk Yazıtları, Uygur Metinleri)[cite: 2].</li>
+                    <li><strong>İslamiyet Etkisinde Gelişen Türk Edebiyatı[cite: 1]:</strong> Divan Edebiyatı ve Halk Edebiyatı[cite: 2, 3].</li>
+                    <li><strong>Batı Ekseninde Gelişen Türk Edebiyatı[cite: 1]:</strong> Tanzimat, Servetifünun, Fecriati, Milli Edebiyat ve Cumhuriyet Dönemi[cite: 2].</li>
+                </ul>
+            </section>
+
+            <!-- DEĞERLENDİRME VE ÖLÇME SORULARI -->
+            <section class="section-card">
+                <h2>7. Tema Değerlendirme ve Ölçme Soruları (100 Puan)</h2>
+                <p>Her soru 20 puandır. Yanlış cevap verdiğinizde doğru yanıt gösterilmez; ipucu alarak tekrar deneyebilirsiniz.</p>
+
+                <!-- Soru 1 -->
+                <div class="question-box" id="q1">
+                    <h4>Soru 1 (20 Puan): Çoktan Seçmeli</h4>
+                    <p><strong>Aşağıdakilerden hangisi İslamiyet öncesi sözlü dönem ürünlerinden biri değildir?</strong></p>
+                    <label><input type="radio" name="soru1" value="A"> A) Koşuk</label><br>
+                    <label><input type="radio" name="soru1" value="B"> B) Sagu</label><br>
+                    <label><input type="radio" name="soru1" value="C"> C) Destan</label><br>
+                    <label><input type="radio" name="soru1" value="D"> D) Koşma</label><br>
+                    <label><input type="radio" name="soru1" value="E"> E) Sav</label><br>
+                    <button class="check-btn" onclick="soruKontrol(1, 'D')">Cevapla</button>
+                    <div id="feedback1" class="feedback"></div>
+                </div>
+
+                <!-- Soru 2 -->
+                <div class="question-box" id="q2">
+                    <h4>Soru 2 (20 Puan): Doğru / Yanlış</h4>
+                    <p><strong>Masalların döşeme bölümünde "Bir varmış, bir yokmuş..." gibi kalıplaşmış giriş sözlerine yer verilir[cite: 14]. (Doğru mu, Yanlış mı?)</strong></p>
+                    <label><input type="radio" name="soru2" value="D"> Doğru</label><br>
+                    <label><input type="radio" name="soru2" value="Y"> Yanlış</label><br>
+                    <button class="check-btn" onclick="soruKontrol(2, 'D')">Cevapla</button>
+                    <div id="feedback2" class="feedback"></div>
+                </div>
+
+                <!-- Soru 3 -->
+                <div class="question-box" id="q3">
+                    <h4>Soru 3 (20 Puan): Boşluk Doldurma</h4>
+                    <p><strong>Tamlayanı ek almamış, sadece tamlananı ek almış isim tamlamalarına ne ad verilir[cite: 18]?</strong></p>
+                    <label><input type="radio" name="soru3" value="belirtili"> A) Belirtili Ad Tamlaması</label><br>
+                    <label><input type="radio" name="soru3" value="belirtisiz"> B) Belirtisiz Ad Tamlaması</label><br>
+                    <label><input type="radio" name="soru3" value="zincirleme"> C) Zincirleme Ad Tamlaması</label><br>
+                    <button class="check-btn" onclick="soruKontrol(3, 'belirtisiz')">Cevapla</button>
+                    <div id="feedback3" class="feedback"></div>
+                </div>
+
+                <!-- Soru 4 -->
+                <div class="question-box" id="q4">
+                    <h4>Soru 4 (20 Puan): Eşleştirme</h4>
+                    <p><strong>"Grimm Kardeşler" masal derlemesi hangi ülkeye / millete aittir[cite: 13]?</strong></p>
+                    <label><input type="radio" name="soru4" value="fransa"> A) Fransa</label><br>
+                    <label><input type="radio" name="soru4" value="almanya"> B) Almanya</label><br>
+                    <label><input type="radio" name="soru4" value="danimarka"> C) Danimarka</label><br>
+                    <button class="check-btn" onclick="soruKontrol(4, 'almanya')">Cevapla</button>
+                    <div id="feedback4" class="feedback"></div>
+                </div>
+
+                <!-- Soru 5 -->
+                <div class="question-box" id="q5">
+                    <h4>Soru 5 (20 Puan): Türkü Bilgisi</h4>
+                    <p><strong>Türkülerde tekrarlanan, nakarat niteliğindeki bölüme ne ad verilir[cite: 10]?</strong></p>
+                    <label><input type="radio" name="soru5" value="bend"> A) Bend</label><br>
+                    <label><input type="radio" name="soru5" value="kavuştak"> B) Kavuştak</label><br>
+                    <label><input type="radio" name="soru5" value="mahlas"> C) Mahlas</label><br>
+                    <button class="check-btn" onclick="soruKontrol(5, 'kavuştak')">Cevapla</button>
+                    <div id="feedback5" class="feedback"></div>
+                </div>
+
+                <!-- Sonuç Alanı -->
+                <div id="sonuc-kutusu">
+                    <h3>Sınav Tamamlandı!</h3>
+                    <p id="ogrenci-ozet"></p>
+                    <p id="puan-yazisi"></p>
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Edebiyat Ders Materyalleri | İnteraktif Ölçme ve Değerlendirme Modülü</p>
+    </footer>
+
+    <script>
+        let toplamPuan = 0;
+        let dogruSayisi = 0;
+        let cevaplananSorular = {};
+        let denemeHaklari = { 1: 1, 2: 1, 3: 1, 4: 1, 5: 1 };
+
+        const ipuclari = {
+            1: "İpucu: Koşma, İslamiyet sonrasında gelişen Âşık Tarzı halk edebiyatı ürünüdür.",
+            2: "İpucu: Masalların başında anlatıcı dinleyiciyi hazırlamak için kalıplaşmış giriş cümleleri kullanır[cite: 14].",
+            3: "İpucu: Bu tamlamada birinci sözcük ek almazken, ikinci sözcük iyelik eki alır (Örn: Çiçek kokusu)[cite: 18].",
+            4: "İpucu: Jacob ve Wilhelm Grimm kardeşler Avrupa'da masal derlemesi yapan Alman folkloristlerdir[cite: 13].",
+            5: "İpucu: Asıl sözlerin bulunduğu bölüme bend, aralarda tekrarlanan bağlayıcı kısma ise bu isim verilir[cite: 10]."
+        };
+
+        function sinaviBaslat() {
+            const ad = document.getElementById('ogrenci-ad').value.trim();
+            const no = document.getElementById('ogrenci-no').value.trim();
+            
+            if(ad === "" || no === "") {
+                alert("Lütfen değerlendirmeye başlamadan önce Ad Soyad ve Numara/Sınıf bilgilerini doldurunuz!");
+                return;
+            }
+
+            document.getElementById('ogrenci-bolumu').style.display = 'none';
+            document.getElementById('ders-icerigi').style.display = 'block';
+        }
+
+        function soruKontrol(soruNo, dogruCevap) {
+            if (cevaplananSorular[soruNo]) return; // Zaten doğru cevaplanmışsa işlem yapma
+
+            const secilen = document.querySelector(`input[name="soru${soruNo}"]:checked`);
+            const feedback = document.getElementById(`feedback${soruNo}`);
+
+            if (!secilen) {
+                alert("Lütfen bir seçenek işaretleyiniz.");
+                return;
+            }
+
+            feedback.style.display = "block";
+
+            if (secilen.value === dogruCevap) {
+                feedback.className = "feedback success";
+                feedback.innerHTML = "Tebrikler, doğru cevap!";
+                toplamPuan += 20;
+                dogruSayisi++;
+                cevaplananSorular[soruNo] = true;
+                
+                // Seçenekleri kilitle
+                const radious = document.querySelectorAll(`input[name="soru${soruNo}"]`);
+                radious.forEach(r => r.disabled = true);
+                
+                kontrolEtBitir();
+            } else {
+                if (denemeHaklari[soruNo] === 1) {
+                    denemeHaklari[soruNo]--;
+                    feedback.className = "feedback hint";
+                    feedback.innerHTML = `Yanlış cevap! Doğru cevap gösterilmiyor. İpucu: ${ipuclari[soruNo]}<br><strong>Lütfen tekrar deneyiniz.</strong>`;
+                } else {
+                    feedback.className = "feedback error";
+                    feedback.innerHTML = "Hatalı cevap verdiniz. Bu soru için puan alamadınız.";
+                    cevaplananSorular[soruNo] = true; // Hak bitti
+                    
+                    const radious = document.querySelectorAll(`input[name="soru${soruNo}"]`);
+                    radious.forEach(r => r.disabled = true);
+                    
+                    kontrolEtBitir();
+                }
+            }
+        }
+
+        function kontrolEtBitir() {
+            if (Object.keys(cevaplananSorular).length === 5) {
+                const ad = document.getElementById('ogrenci-ad').value;
+                const no = document.getElementById('ogrenci-no').value;
+                
+                const sonucKutusu = document.getElementById('sonuc-kutusu');
+                sonucKutusu.style.display = 'block';
+                
+                document.getElementById('ogrenci-ozet').innerHTML = `Öğrenci: <strong>${ad}</strong> (${no}) | Doğru Sayısı: ${dogruSayisi} / 5`;
+                document.getElementById('puan-yazisi').innerHTML = `Toplam Puanınız: <strong>${toplamPuan} / 100</strong>`;
+                
+                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
